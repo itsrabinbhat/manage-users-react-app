@@ -1,17 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { fetchUsers } from "../functions/handleData";
 
 const FetchUsers = () => {
+  const [fetchedUsers, setFetchedUsers] = useState([]);
   return (
     <>
       <div id="fetch-users">
-        <button>Fetch Users</button>
+        <button onClick={() => fetchUsers(setFetchedUsers)}>Fetch Users</button>
 
         <div className="users">
-          <div className="user">
-            <p>Name: John Doe</p>
-            <p>Address: Nepal</p>
-          </div>
+          {fetchedUsers.length > 0
+            ? fetchedUsers.map((user, idx) => {
+                return (
+                  <div className="user" key={idx}>
+                    <p>Name: {user.Name}</p>
+                    <p>Address: {user.Address}</p>
+                  </div>
+                );
+              })
+            : ""}
         </div>
       </div>
       <Link to="/">

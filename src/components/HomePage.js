@@ -6,16 +6,16 @@ const HomePage = () => {
     <div>
       <h2>Manage Users:</h2>
       <div className="btn-container">
-        <Link to="./components/AddUsers">
+        <Link to="AddUsers">
           <button>Add user</button>
         </Link>
-        <Link to="./components/UpdateUsers">
+        <Link to="UpdateUsers">
           <button>Update user</button>
         </Link>
-        <Link to="./components/RemoveUsers">
+        <Link to="RemoveUsers">
           <button>Remove user</button>
         </Link>
-        <Link to="./components/FetchUsers">
+        <Link to="FetchUsers">
           <button>Fetch user</button>
         </Link>
       </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./components/HomePage";
 import AddUsers from "./components/AddUsers";
 import UpdateUsers from "./components/UpdateUsers";
@@ -13,10 +13,10 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="components/AddUsers" element={<AddUsers />} />
-          <Route path="components/UpdateUsers" element={<UpdateUsers />} />
-          <Route path="components/RemoveUsers" element={<RemoveUsers />} />
-          <Route path="components/FetchUsers" element={<FetchUsers />} />
+          <Route path="AddUsers" element={<AddUsers />} />
+          <Route path="UpdateUsers" element={<UpdateUsers />} />
+          <Route path="RemoveUsers" element={<RemoveUsers />} />
+          <Route path="FetchUsers" element={<FetchUsers />} />
         </Routes>
       </BrowserRouter>
     </div>

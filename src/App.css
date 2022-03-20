@@ -7,7 +7,7 @@ body {
   align-items: center;
   height: 100vh;
   font-family: "Open Sans";
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .btn-container {
